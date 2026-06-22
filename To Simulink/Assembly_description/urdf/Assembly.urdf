@@ -1,0 +1,279 @@
+<?xml version="1.0" ?>
+<robot name="Assembly" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Assembly_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find Assembly_description)/urdf/Assembly.trans" />
+<xacro:include filename="$(find Assembly_description)/urdf/Assembly.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.46146690854070227 0.3138995373891509 0.09072307822500031" rpy="0 0 0"/>
+    <mass value="468.21807001655566"/>
+    <inertia ixx="10.961439" iyy="20.219738" izz="28.860404" ixy="0.0" iyz="-0.0" ixz="0.016518"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Shaft_v1_2">
+  <inertial>
+    <origin xyz="-0.1121932195830665 0.18610053738915094 -0.0038256995632053314" rpy="0 0 0"/>
+    <mass value="3.431894664337413"/>
+    <inertia ixx="0.144336" iyy="0.000336" izz="0.144336" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.822386 -0.127799 -0.032651" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/Shaft_v1_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.822386 -0.127799 -0.032651" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/Shaft_v1_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Shaft_v1_1">
+  <inertial>
+    <origin xyz="-0.11219321958307643 0.18610053738915094 -0.0038256995632053002" rpy="0 0 0"/>
+    <mass value="3.431894664337413"/>
+    <inertia ixx="0.144336" iyy="0.000336" izz="0.144336" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.326386 -0.127799 -0.032651" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/Shaft_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.326386 -0.127799 -0.032651" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/Shaft_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Magnetic_Wheel__Scratch__v1_2">
+  <inertial>
+    <origin xyz="-7.031145706326569e-06 0.027499537389150966 -1.474501320173488e-05" rpy="0 0 0"/>
+    <mass value="6.998750422065093"/>
+    <inertia ixx="0.011879" iyy="0.020373" izz="0.01188" ixy="-0.0" iyz="-0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.710193 0.0411 -0.028825" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/Magnetic_Wheel__Scratch__v1_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.710193 0.0411 -0.028825" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/Magnetic_Wheel__Scratch__v1_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Magnetic_Wheel__Scratch__v1_1">
+  <inertial>
+    <origin xyz="-1.673511972102859e-05 0.027499537389147982 3.0043679322480643e-07" rpy="0 0 0"/>
+    <mass value="6.998750422065093"/>
+    <inertia ixx="0.01188" iyy="0.020373" izz="0.011879" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.214193 0.0411 -0.028825" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/Magnetic_Wheel__Scratch__v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.214193 0.0411 -0.028825" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/Magnetic_Wheel__Scratch__v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Magnetic_Wheel__Scratch__v1_4">
+  <inertial>
+    <origin xyz="1.4825866923140474e-05 -0.02750046261084893 -6.511125855531569e-06" rpy="0 0 0"/>
+    <mass value="6.998750422065093"/>
+    <inertia ixx="0.01188" iyy="0.020373" izz="0.011879" ixy="-0.0" iyz="0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.710193 -0.6689 -0.028825" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/Magnetic_Wheel__Scratch__v1_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.710193 -0.6689 -0.028825" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/Magnetic_Wheel__Scratch__v1_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Magnetic_Wheel__Scratch__v1_3">
+  <inertial>
+    <origin xyz="-2.1958310197911501e-07 -0.02750046261085204 -1.6215099873980593e-05" rpy="0 0 0"/>
+    <mass value="6.998750422065093"/>
+    <inertia ixx="0.011879" iyy="0.020373" izz="0.01188" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.214193 -0.6689 -0.028825" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/Magnetic_Wheel__Scratch__v1_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.214193 -0.6689 -0.028825" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/Magnetic_Wheel__Scratch__v1_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Neck_v1_1">
+  <inertial>
+    <origin xyz="-2.195830579587721e-07 -4.626108488503533e-07 0.008713489550542242" rpy="0 0 0"/>
+    <mass value="0.42407919407837114"/>
+    <inertia ixx="0.000447" iyy="0.000447" izz="0.000826" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.612193 -0.3139 -0.176825" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/Neck_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.612193 -0.3139 -0.176825" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/Neck_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Mounting_Arm_v1_1">
+  <inertial>
+    <origin xyz="-2.1544778661120034e-07 -4.925115800191726e-07 0.03767883401981503" rpy="0 0 0"/>
+    <mass value="1.5630519991657512"/>
+    <inertia ixx="0.001931" iyy="0.00172" izz="0.001066" ixy="2.5e-05" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.612193 -0.3139 -0.206825" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/Mounting_Arm_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.612193 -0.3139 -0.206825" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/Mounting_Arm_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Arm_v1_1">
+  <inertial>
+    <origin xyz="-0.20755572869576144 0.6270222900544822 -0.2068256995632048" rpy="0 0 0"/>
+    <mass value="2.130753801370737"/>
+    <inertia ixx="0.003179" iyy="0.142491" izz="0.144441" ixy="-0.016595" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-1.003487 0.291538 -0.463651" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/Arm_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-1.003487 0.291538 -0.463651" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Assembly_description/meshes/Arm_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Revolute 1" type="continuous">
+  <origin xyz="0.822386 0.127799 0.032651" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Shaft_v1_2"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Revolute 2" type="continuous">
+  <origin xyz="0.326386 0.127799 0.032651" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Shaft_v1_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Revolute 3" type="continuous">
+  <origin xyz="-0.112193 -0.168899 -0.003826" rpy="0 0 0"/>
+  <parent link="Shaft_v1_2"/>
+  <child link="Magnetic_Wheel__Scratch__v1_2"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="Revolute 4" type="continuous">
+  <origin xyz="-0.112193 -0.168899 -0.003826" rpy="0 0 0"/>
+  <parent link="Shaft_v1_1"/>
+  <child link="Magnetic_Wheel__Scratch__v1_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="Revolute 5" type="continuous">
+  <origin xyz="-0.112193 0.541101 -0.003826" rpy="0 0 0"/>
+  <parent link="Shaft_v1_2"/>
+  <child link="Magnetic_Wheel__Scratch__v1_4"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="Revolute 6" type="continuous">
+  <origin xyz="-0.112193 0.541101 -0.003826" rpy="0 0 0"/>
+  <parent link="Shaft_v1_1"/>
+  <child link="Magnetic_Wheel__Scratch__v1_3"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="Rigid 7" type="fixed">
+  <origin xyz="0.612193 0.3139 0.176825" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Neck_v1_1"/>
+</joint>
+
+<joint name="Revolute 8" type="continuous">
+  <origin xyz="0.0 0.0 0.03" rpy="0 0 0"/>
+  <parent link="Neck_v1_1"/>
+  <child link="Mounting_Arm_v1_1"/>
+  <axis xyz="-0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="Revolute 9" type="continuous">
+  <origin xyz="0.391294 -0.605438 0.256826" rpy="0 0 0"/>
+  <parent link="Mounting_Arm_v1_1"/>
+  <child link="Arm_v1_1"/>
+  <axis xyz="0.99317 0.116673 0.0"/>
+</joint>
+
+</robot>
